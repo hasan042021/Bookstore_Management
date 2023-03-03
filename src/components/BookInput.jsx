@@ -26,14 +26,14 @@ const BookInput = () => {
   };
   return (
     <div>
-      <div class="p-4 overflow-hidden bg-white shadow-cardShadow rounded-md">
-        <h4 class="mb-8 text-xl font-bold text-center">Add New Book</h4>
-        <form onSubmit={handleSubmit} class="book-form">
-          <div class="space-y-2">
+      <div className="p-4 overflow-hidden bg-white shadow-cardShadow rounded-md">
+        <h4 className="mb-8 text-xl font-bold text-center">Add New Book</h4>
+        <form onSubmit={handleSubmit} className="book-form">
+          <div className="space-y-2">
             <label for="name">Book Name</label>
             <input
               required
-              class="text-input"
+              className="text-input"
               type="text"
               id="input-Bookname"
               name="name"
@@ -46,11 +46,11 @@ const BookInput = () => {
             />
           </div>
 
-          <div class="space-y-2">
+          <div className="space-y-2">
             <label for="category">Author</label>
             <input
               required
-              class="text-input"
+              className="text-input"
               type="text"
               id="input-Bookauthor"
               name="author"
@@ -63,11 +63,11 @@ const BookInput = () => {
             />
           </div>
 
-          <div class="space-y-2">
+          <div className="space-y-2">
             <label for="image">Image Url</label>
             <input
               required
-              class="text-input"
+              className="text-input"
               type="text"
               id="input-Bookthumbnail"
               name="thumbnail"
@@ -80,12 +80,12 @@ const BookInput = () => {
             />
           </div>
 
-          <div class="grid grid-cols-2 gap-8 pb-4">
-            <div class="space-y-2">
+          <div className="grid grid-cols-2 gap-8 pb-4">
+            <div className="space-y-2">
               <label for="price">Price</label>
               <input
                 required
-                class="text-input"
+                className="text-input"
                 type="number"
                 id="input-Bookprice"
                 name="price"
@@ -98,11 +98,11 @@ const BookInput = () => {
               />
             </div>
 
-            <div class="space-y-2">
+            <div className="space-y-2">
               <label for="quantity">Rating</label>
               <input
                 required
-                class="text-input"
+                className="text-input"
                 type="number"
                 id="input-Bookrating"
                 name="rating"
@@ -118,12 +118,12 @@ const BookInput = () => {
             </div>
           </div>
 
-          <div class="flex items-center">
+          <div className="flex items-center">
             <input
               id="input-Bookfeatured"
               type="checkbox"
               name="featured"
-              class="w-4 h-4"
+              className="w-4 h-4"
               onChange={(e) =>
                 setInput((preveState) => {
                   return { ...preveState, featured: e.target.checked };
@@ -131,13 +131,13 @@ const BookInput = () => {
               }
               checked={input.featured}
             />
-            <label for="featured" class="ml-2 text-sm">
+            <label for="featured" className="ml-2 text-sm">
               {" "}
               This is a featured book{" "}
             </label>
           </div>
 
-          <button type="submit" class="submit" id="submit">
+          <button type="submit" className="submit" id="submit">
             {"Add Book"}
           </button>
         </form>

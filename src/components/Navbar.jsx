@@ -3,23 +3,23 @@ import logoImage from "../images/logo.svg";
 
 const Navbar = ({ setSearchTerm }) => {
   return (
-    <nav class="py-4 2xl:px-6">
-      <div class="container flex items-center justify-between">
-        <img src={logoImage} width="150px" class="object-contain" />
+    <nav className="py-4 2xl:px-6">
+      <div className="container flex items-center justify-between">
+        <img src={logoImage} width="150px" className="object-contain" />
 
-        <ul class="hidden md:flex items-center space-x-6">
-          <li class="font-semibold cursor-pointer">Book Store</li>
-          <li class="cursor-pointer">Wishlist</li>
-          <li class="cursor-pointer">My Collection</li>
+        <ul className="hidden md:flex items-center space-x-6">
+          <li className="font-semibold cursor-pointer">Book Store</li>
+          <li className="cursor-pointer">Wishlist</li>
+          <li className="cursor-pointer">My Collection</li>
         </ul>
 
-        <form class="flex items-center">
-          <div class="group relative rounded-md bg-white">
+        <form className="flex items-center">
+          <div className="group relative rounded-md bg-white">
             <svg
               width="20"
               height="20"
               fill="currentColor"
-              class="absolute left-3 top-1/2 -mt-2.5 text-slate-400 pointer-events-none group-focus-within:text-primary"
+              className="absolute left-3 top-1/2 -mt-2.5 text-slate-400 pointer-events-none group-focus-within:text-primary"
             >
               <path
                 fill-rule="evenodd"
@@ -30,7 +30,7 @@ const Navbar = ({ setSearchTerm }) => {
             <input
               type="text"
               placeholder="Filter books..."
-              class="search"
+              className="search"
               id="lws-searchBook"
               onChange={(e) => setSearchTerm(e.target.value)}
             />

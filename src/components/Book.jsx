@@ -11,23 +11,25 @@ const Book = ({ book, setWillUpdate, setCurrentBook }) => {
     setCurrentBook(book);
   };
   return (
-    <div class="book-card">
+    <div className="book-card">
       <img
-        class="h-[240px] w-[170px] object-cover lws-bookThumbnail"
+        className="h-[240px] w-[170px] object-cover lws-bookThumbnail"
         src={thumbnail}
         alt="book"
       />
-      <div class="flex-1 h-full pr-2 pt-2 flex flex-col">
-        <div class="flex items-center justify-between">
-          <span class="badge-success lws-Badge">{featured && "featured"}</span>
-          <div class="text-gray-500 space-x-2">
-            <button onClick={udpateHandler} class="lws-edit">
+      <div className="flex-1 h-full pr-2 pt-2 flex flex-col">
+        <div className="flex items-center justify-between">
+          <span className="badge-success lws-Badge">
+            {featured && "featured"}
+          </span>
+          <div className="text-gray-500 space-x-2">
+            <button onClick={udpateHandler} className="lws-edit">
               <svg
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="w-6 h-6"
+                className="w-6 h-6"
               >
                 <path
                   stroke-linecap="round"
@@ -36,13 +38,16 @@ const Book = ({ book, setWillUpdate, setCurrentBook }) => {
                 />
               </svg>
             </button>
-            <button onClick={() => dispatch(deleteBook(id))} class="lws-delete">
+            <button
+              onClick={() => dispatch(deleteBook(id))}
+              className="lws-delete"
+            >
               <svg
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="w-6 h-6"
+                className="w-6 h-6"
               >
                 <path
                   stroke-linecap="round"
@@ -54,15 +59,15 @@ const Book = ({ book, setWillUpdate, setCurrentBook }) => {
           </div>
         </div>
 
-        <div class="space-y-2 mt-4 h-full">
-          <h4 class="lws-bookName">{name}</h4>
-          <p class="lws-author">{author}</p>
-          <div class="lws-stars">
+        <div className="space-y-2 mt-4 h-full">
+          <h4 className="lws-bookName">{name}</h4>
+          <p className="lws-author">{author}</p>
+          <div className="lws-stars">
             {Array.from({ length: rating }, (i) => (
               <Star />
             ))}
           </div>
-          <p class="lws-price">BDT {price}</p>
+          <p className="lws-price">BDT {price}</p>
         </div>
       </div>
     </div>

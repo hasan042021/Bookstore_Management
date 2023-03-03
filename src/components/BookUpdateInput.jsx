@@ -29,16 +29,16 @@ const BookUpdateInput = ({ setWillUpdate, currentBook }) => {
   };
   return (
     <div>
-      <div class="p-4 overflow-hidden bg-white shadow-cardShadow rounded-md">
-        <h4 class="mb-8 text-xl font-bold text-center">
+      <div className="p-4 overflow-hidden bg-white shadow-cardShadow rounded-md">
+        <h4 className="mb-8 text-xl font-bold text-center">
           Update Book Information
         </h4>
-        <form onSubmit={handleSubmit} class="book-form">
-          <div class="space-y-2">
+        <form onSubmit={handleSubmit} className="book-form">
+          <div className="space-y-2">
             <label for="name">Book Name</label>
             <input
               required
-              class="text-input"
+              className="text-input"
               type="text"
               id="input-Bookname"
               name="name"
@@ -51,11 +51,11 @@ const BookUpdateInput = ({ setWillUpdate, currentBook }) => {
             />
           </div>
 
-          <div class="space-y-2">
+          <div className="space-y-2">
             <label for="category">Author</label>
             <input
               required
-              class="text-input"
+              className="text-input"
               type="text"
               id="input-Bookauthor"
               name="author"
@@ -68,11 +68,11 @@ const BookUpdateInput = ({ setWillUpdate, currentBook }) => {
             />
           </div>
 
-          <div class="space-y-2">
+          <div className="space-y-2">
             <label for="image">Image Url</label>
             <input
               required
-              class="text-input"
+              className="text-input"
               type="text"
               id="input-Bookthumbnail"
               name="thumbnail"
@@ -85,12 +85,12 @@ const BookUpdateInput = ({ setWillUpdate, currentBook }) => {
             />
           </div>
 
-          <div class="grid grid-cols-2 gap-8 pb-4">
-            <div class="space-y-2">
+          <div className="grid grid-cols-2 gap-8 pb-4">
+            <div className="space-y-2">
               <label for="price">Price</label>
               <input
                 required
-                class="text-input"
+                className="text-input"
                 type="number"
                 id="input-Bookprice"
                 name="price"
@@ -103,11 +103,11 @@ const BookUpdateInput = ({ setWillUpdate, currentBook }) => {
               />
             </div>
 
-            <div class="space-y-2">
+            <div className="space-y-2">
               <label for="quantity">Rating</label>
               <input
                 required
-                class="text-input"
+                className="text-input"
                 type="number"
                 id="input-Bookrating"
                 name="rating"
@@ -123,12 +123,12 @@ const BookUpdateInput = ({ setWillUpdate, currentBook }) => {
             </div>
           </div>
 
-          <div class="flex items-center">
+          <div className="flex items-center">
             <input
               id="input-Bookfeatured"
               type="checkbox"
               name="featured"
-              class="w-4 h-4"
+              className="w-4 h-4"
               onChange={(e) =>
                 setInput((preveState) => {
                   return { ...preveState, featured: e.target.checked };
@@ -136,13 +136,13 @@ const BookUpdateInput = ({ setWillUpdate, currentBook }) => {
               }
               checked={input.featured}
             />
-            <label for="featured" class="ml-2 text-sm">
+            <label for="featured" className="ml-2 text-sm">
               {" "}
               This is a featured book{" "}
             </label>
           </div>
 
-          <button type="submit" class="submit" id="submit">
+          <button type="submit" className="submit" id="submit">
             {"Update Book"}
           </button>
         </form>
